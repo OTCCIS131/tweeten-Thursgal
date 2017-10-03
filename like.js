@@ -1,17 +1,15 @@
 
-function onClick() {
-    let clicks = document.getElementById('likes').nextSibling
-    let likes = parseInt(clicks.textContent) + 1;
-    clicks.textContent = likes;
+    let buttons = Array.from(document.getElementsByClassName("glyphicon"));
+    buttons.forEach(button => {
+        button.addEventListener("click", e => {
+            let currentNum = button.nextSibling.textContent.trim()
+            let likes = parseInt(currentNum) + 1;
+            button.nextSibling.textContent = likes;
+    })
+    
 
 
-};
-let buttons = document.getElementById("likebutton");
-
-buttons.addEventListener("click", onClick);
-
-
-
+})
 
 
 // get elements by class name, and convert to an array using Array.from()
