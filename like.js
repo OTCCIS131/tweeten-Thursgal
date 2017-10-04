@@ -30,3 +30,10 @@ $(function() {
         $(this).next().text(newCount);
     })
 })
+// For programatically adding a new thing
+// let newDiv = $("<div>").addClass("foo")
+//                         .css({
+//                             cursor: "pointer";
+//                         })
+//Insertion
+// $("some selector").append(newDiv)
