@@ -1,15 +1,15 @@
 
-    let buttons = Array.from(document.getElementsByClassName("glyphicon"));
-    buttons.forEach(button => {
-        button.addEventListener("click", e => {
-            let currentNum = button.nextSibling.textContent.trim()
-            let likes = parseInt(currentNum) + 1;
-            button.nextSibling.textContent = likes;
-    })
+//     let buttons = Array.from(document.getElementsByClassName("glyphicon"));
+//     buttons.forEach(button => {
+//         button.addEventListener("click", e => {
+//             let currentNum = button.nextSibling.textContent.trim()
+//             let likes = parseInt(currentNum) + 1;
+//             button.nextSibling.textContent = likes;
+//     })
     
 
 
-})
+// })
 
 
 // get elements by class name, and convert to an array using Array.from()
@@ -22,3 +22,11 @@
 // Set it back
 
 // #tableflip
+
+$(function() {
+    $(".increment").click(function(event) {
+        let currentCount = $(this).next().text();
+        let newCount = parseInt(currentCount) + 1;
+        $(this).next().text(newCount);
+    })
+})
