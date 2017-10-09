@@ -31,9 +31,12 @@ $(function() {
     })
 })
 // For programatically adding a new thing
-// let newDiv = $("<div>").addClass("foo")
-//                         .css({
-//                             cursor: "pointer";
-//                         })
+
+//let newDiv = $("<div>").addClass("foo");
+$(".submit").click(function(event) {
+    alert("So far so good.");
+    let tweet = $(".textarea").val();
+    alert(tweet);
+});
 //Insertion
-// $("some selector").append(newDiv)
+//("some selector").append(newDiv)
