@@ -8,6 +8,9 @@
         img[width="50px"] {
             float: left;
         }
+        p {
+            word-wrap: break-word;
+        }
     </style>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -67,7 +70,7 @@
                             <textarea class="form-control textarea" rows="3"></textarea><br>
                             <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-picture" aria-hidden="true"></button>
                             <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-ice-lolly" aria-hidden="true"></button>
-                            <aside>140
+                            <aside><span id="counter">140</span>
                             <button class="btn btn-primary submit" type="button">Tweet</button></aside>
                         </form>
                     </div>
@@ -80,7 +83,6 @@
                             <img src="darksouls.jpg" alt="Dark Souls" class="img-circle" width= 50px height= 50px>
                             <h3><b>Bennie O'Neal</b></h3>
                             <p>Wow, this class is okay! #otc #webDev2</p>
-
                             <i class="glyphicon glyphicon-heart increment"></i><span>45</span>
                             <i class="glyphicon glyphicon-refresh increment"></i><span>9001</span>
                         </div>
@@ -91,7 +93,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Your Tweet Activity</div>
                     <div class="panel-body">
-                        You've tweeted once. Don't be too proud of yourself.
+                        You've tweeted at least once. Don't be too proud of yourself.
                     </div>
                 </div>
                 <div class="panel panel-default">

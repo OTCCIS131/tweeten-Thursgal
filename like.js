@@ -24,8 +24,26 @@
 // #tableflip
 
 
+$(".textarea").keyup(function() {
+    let aTweet = $(".textarea").val();
+    let newCount = 140 - aTweet.length;
+    
+    $("#counter").text(newCount);
+    if (parseInt($("#counter").text()) < 0) {
+        $("#counter").css("color", "red");
+    }
+    else {
+        $("#counter").css("color", "black");
+    }
+})
+
 $(".submit").click(function(event) {
     let tweet = $(".textarea").val();
+    if(tweet.trim() == '') return;
+    if(tweet.length > 140) {
+        alert("Tweet is over 140 characters.");
+        return;
+    }
     $(".tweets").prepend("<div class=\"panel panel-default\"><div class=\"panel-body\"><p>" +
                         "<b>Tweets &#8226; Tweets &amp; Replies &#8226; Media</b></p><hr>" +
                         "<img src=\"darksouls.jpg\" alt=\"Dark Souls\" class=\"img-circle\" width= 50px height= 50px>" +
@@ -35,6 +53,7 @@ $(".submit").click(function(event) {
                         "<i class=\"glyphicon glyphicon-heart increment\"></i><span>0</span><i class=\"glyphicon glyphicon-refresh increment\"></i>" +
                         "<span>0</span></div></div>");
     $(".textarea").val("");
+    $("#counter").text("140");
 });
 $(function() {
     $(document).on('click', '.increment', function() {
