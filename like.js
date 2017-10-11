@@ -23,20 +23,23 @@
 
 // #tableflip
 
+
+$(".submit").click(function(event) {
+    let tweet = $(".textarea").val();
+    $(".tweets").prepend("<div class=\"panel panel-default\"><div class=\"panel-body\"><p>" +
+                        "<b>Tweets &#8226; Tweets &amp; Replies &#8226; Media</b></p><hr>" +
+                        "<img src=\"darksouls.jpg\" alt=\"Dark Souls\" class=\"img-circle\" width= 50px height= 50px>" +
+                        "<h3><b>Bennie O'Neal</b></h3><p>" +
+                        tweet +
+                        "</p>" +
+                        "<i class=\"glyphicon glyphicon-heart increment\"></i><span>0</span><i class=\"glyphicon glyphicon-refresh increment\"></i>" +
+                        "<span>0</span></div></div>");
+    $(".textarea").val("");
+});
 $(function() {
-    $(".increment").click(function(event) {
+    $(document).on('click', '.increment', function() {
         let currentCount = $(this).next().text();
         let newCount = parseInt(currentCount) + 1;
         $(this).next().text(newCount);
     })
 })
-// For programatically adding a new thing
-
-//let newDiv = $("<div>").addClass("foo");
-$(".submit").click(function(event) {
-    alert("So far so good.");
-    let tweet = $(".textarea").val();
-    alert(tweet);
-});
-//Insertion
-//("some selector").append(newDiv)
